@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALL Interns</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<h2>ALL INTERNS IN OUR DATABASE</h2>
+<table>
+    <thead>
+    <tr>
+        <td>FIRSTNAME</td>
+        <td>LASTNAME</td>
+        <td>PHONE_NUMBER</td>
+        <td>PASSWORD</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for application in show %}
+    <tr>
+        <td>{{application.firstname}}</td>
+        <td>{{application.lastname}}</td>
+        <td>{{application.phone_number}}</td>
+        <td>{{application.password}}</td>
+
+
+
+    </tr>
+
+
+
+
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+</body>
+</html>
